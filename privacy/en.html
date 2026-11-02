@@ -54,7 +54,7 @@
   <li><strong>What it reads:</strong> only emails that look like flight confirmations, boarding passes or travel receipts, with their PDF attachments.</li>
   <li><strong>What it extracts:</strong> airports, dates, times and flight numbers, saved on your iPhone as flights.</li>
   <li><strong>Where the analysis happens:</strong> entirely on the device, including when the app uses Apple Intelligence to tell real bookings from offers. Email content never leaves your iPhone.</li>
-  <li><strong>Online completion (optional):</strong> before the first search the app asks whether it may send <em>only</em> flight numbers and dates to adsbdb and AeroDataBox (see below) to find airports and times. If you choose “Only on this iPhone” nothing is sent; you can change this at any time with the “Complete flights online” switch.</li>
+  <li><strong>Online completion (optional):</strong> to find airports and times the app may send <em>only</em> flight numbers and dates to adsbdb and AeroDataBox (see below). You can turn this off at any time with the “Complete flights online” switch next to the search button: when it is off, nothing is sent.</li>
   <li><strong>What it does not do:</strong> it does not send, change or delete emails; it keeps no copies of emails; it does not use Gmail data for advertising or to train AI models; it does not transfer Gmail data to anyone.</li>
   <li><strong>Credentials:</strong> the Google access token is stored in your iPhone's Keychain.</li>
   <li><strong>Revoking access:</strong> disconnect Gmail at any time with "Sign out" in the app, or at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
@@ -64,8 +64,8 @@
 <h2>Third-party services</h2>
 <ul>
   <li><strong>Google</strong> (sign-in and Gmail API), only if you connect Gmail.</li>
-  <li><strong>adsbdb.com</strong>: if you allow it, to fill in the connections of a trip the app sends only a <em>flight number</em> (for example "MU788") to look up its route. No names, emails, dates or other personal data are sent.</li>
-  <li><strong>AeroDataBox</strong> (through RapidAPI): if you allow it, for flights in the last year the app may send a <em>flight number and date</em> (for example "MU788, 19/03/2026") to look up that day's airports and times. No names, emails or other personal data are sent.</li>
+  <li><strong>adsbdb.com</strong>: if the “Complete flights online” switch is on, to fill in the connections of a trip the app sends only a <em>flight number</em> (for example "MU788") to look up its route. No names, emails, dates or other personal data are sent.</li>
+  <li><strong>AeroDataBox</strong> (through RapidAPI): if the switch is on, for flights in the last year the app may send a <em>flight number and date</em> (for example "MU788, 19/03/2026") to look up that day's airports and times. No names, emails or other personal data are sent.</li>
   <li><strong>Apple</strong>: Maps for the map and to search smaller towns (Apple receives the text you type in the search), the App Store for in-app purchases, on-device Apple Intelligence. These services are covered by <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</li>
 </ul>
 
