@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TravelTo – Download</title>
+<meta name="description" content="TravelTo: all your trips, on one map. Free on the App Store, or try the beta first.">
+<meta property="og:title" content="TravelTo">
+<meta property="og:description" content="All your trips, on one map. Free on the App Store, or try the beta first.">
+<meta property="og:image" content="https://traveltoapp.app/download/icon.png">
+<meta property="og:url" content="https://traveltoapp.app/download/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#04060d">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  :root { color-scheme: dark; --teal: #47d9d9; --mint: #9ff0ee; --violet: #9a7bff; --muted: rgba(255,255,255,.66); }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: #04060d; color: #fff; font: 17px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  /* The night sky with the app's violet, teal and blue glows; fixed so it stays put while scrolling on iOS too. */
+  body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(60% 40% at 15% 8%, rgba(140,102,255,.34), transparent 70%),
+      radial-gradient(55% 38% at 92% 30%, rgba(71,217,217,.22), transparent 70%),
+      radial-gradient(70% 45% at 40% 100%, rgba(64,128,255,.22), transparent 70%),
+      radial-gradient(120% 80% at 50% 0%, #0b1430, #04060d 70%); }
+  main { max-width: 440px; margin: 0 auto; padding: max(40px, env(safe-area-inset-top)) 20px 40px; text-align: center; }
+  .lang { position: absolute; top: max(14px, env(safe-area-inset-top)); right: 16px; font-size: 14px; }
+  .lang a { color: var(--muted); text-decoration: none; padding: 6px 8px; }
+  .icon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 12px 40px rgba(71,217,217,.25), 0 0 0 1px rgba(255,255,255,.08); }
+  .eyebrow { margin: 22px 0 6px; font: 600 13px/1 ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: .18em; text-transform: uppercase; color: var(--mint); }
+  h1 { margin: 0; font: 800 38px/1.08 ui-rounded, "SF Pro Rounded", -apple-system, sans-serif; letter-spacing: -.5px; }
+  h1 .grad { display: block; background: linear-gradient(90deg, #fff, #b6f5f3 35%, var(--teal) 65%, var(--violet));
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .sub { margin: 14px auto 30px; max-width: 340px; color: var(--muted); }
+  .badge { display: inline-block; line-height: 0; border-radius: 12px; }
+  .badge img { height: 56px; width: auto; }
+  .or { margin: 22px 0 14px; color: var(--muted); font-size: 14px; }
+  .beta { display: block; max-width: 320px; margin: 0 auto; padding: 14px 18px; border-radius: 18px; text-decoration: none; color: #fff;
+    background: linear-gradient(135deg, rgba(71,217,217,.18), rgba(154,123,255,.22)); border: 1px solid rgba(159,240,238,.35);
+    box-shadow: 0 10px 34px rgba(140,102,255,.22); }
+  .beta strong { display: block; font: 700 19px/1.3 ui-rounded, "SF Pro Rounded", -apple-system, sans-serif; }
+  .beta span { font-size: 14px; color: var(--muted); }
+  .beta:active, .badge:active { transform: scale(.98); }
+  .note { margin: 14px auto 0; max-width: 330px; font-size: 13px; color: rgba(255,255,255,.5); }
+  .phone { width: 250px; margin: 44px auto 0; padding: 9px; border-radius: 46px; background: #000;
+    box-shadow: 0 0 0 1.5px rgba(255,255,255,.14), 0 30px 80px rgba(0,0,0,.6), 0 0 90px rgba(71,217,217,.14); }
+  .phone img { display: block; width: 100%; height: auto; border-radius: 37px; }
+  footer { margin-top: 44px; font-size: 13px; color: rgba(255,255,255,.45); }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<nav class="lang"><a id="switch" href="?lang=it">Italiano</a></nav>
+<main>
+  <img class="icon" src="icon.png" alt="TravelTo">
+  <p class="eyebrow">TravelTo</p>
+  <h1><span data-it="Tutti i tuoi viaggi,">All your trips,</span><span class="grad" data-it="su una mappa.">on one map.</span></h1>
+  <p class="sub" data-it="Paesi, città e voli sulla tua mappa del mondo. Gratis per iPhone.">Countries, cities and flights on your own world map. Free for iPhone.</p>
+
+  <a class="badge" href="https://apps.apple.com/app/travelto/id6825086985">
+    <img id="badge" src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+  </a>
+
+  <p class="or" data-it="oppure">or</p>
+  <a class="beta" href="https://testflight.apple.com/join/gJcFzGsM">
+    <strong data-it="Prova la beta">Try the beta</strong>
+    <span data-it="Le novità in anteprima, con TestFlight">New features first, with TestFlight</span>
+  </a>
+  <p class="note" data-it="La beta usa l'app TestFlight di Apple (gratis): il link ti guida. Serve iOS 27. Il link non si apre da TikTok? Tocca ··· e scegli «Apri nel browser».">The beta runs in Apple's free TestFlight app: the link shows you how. Requires iOS 27. Link not opening from TikTok? Tap ··· and choose “Open in browser”.</p>
+
+  <div class="phone"><img id="shot" src="mappa-en.jpg" width="598" height="1300" loading="lazy" alt="TravelTo's world map" data-it="La mappa del mondo di TravelTo"></div>
+
+  <footer>
+    <a id="privacy" href="/privacy/en.html">Privacy Policy</a> · <a id="terms" href="/termini/en.html">Terms</a> · <a href="mailto:traveltoapp1@gmail.com">traveltoapp1@gmail.com</a>
+  </footer>
+</main>
+<script>
+  // Italian for Italian phones (or ?lang=it), English for everyone else.
+  var q = new URLSearchParams(location.search).get("lang");
+  var it = q ? q === "it" : /^it\b/i.test(navigator.language || "");
+  if (it) {
+    document.documentElement.lang = "it";
+    document.title = "TravelTo – Scarica";
+    document.querySelectorAll("[data-it]").forEach(function (el) {
+      if (el.tagName === "IMG") el.alt = el.dataset.it; else el.textContent = el.dataset.it;
+    });
+    document.getElementById("badge").src = "https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/it-it";
+    document.getElementById("badge").alt = "Scarica su App Store";
+    document.getElementById("shot").src = "mappa-it.jpg";
+    document.getElementById("privacy").href = "/privacy/";
+    document.getElementById("terms").href = "/termini/";
+    document.getElementById("terms").textContent = "Termini";
+  }
+  var sw = document.getElementById("switch");
+  sw.href = "?lang=" + (it ? "en" : "it");
+  sw.textContent = it ? "English" : "Italiano";
+</script>
+</body>
+</html>
