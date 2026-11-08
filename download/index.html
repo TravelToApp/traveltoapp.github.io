@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>TravelTo – Download</title>
-<meta name="description" content="TravelTo: all your trips, on one map. Free on the App Store, or try the beta first.">
+<title>TravelTo – All your trips, on one map</title>
+<meta name="description" content="TravelTo for iPhone: your countries, cities and flights on one world map, found in your photos. Free on the App Store, or try the beta first.">
 <meta property="og:title" content="TravelTo">
 <meta property="og:description" content="All your trips, on one map. Free on the App Store, or try the beta first.">
 <meta property="og:image" content="https://traveltoapp.app/download/icon.png">
@@ -13,10 +13,15 @@
 <meta name="theme-color" content="#04060d">
 <link rel="icon" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
+<link rel="alternate" hreflang="en" href="https://traveltoapp.app/download/">
+<link rel="alternate" hreflang="it" href="https://traveltoapp.app/download/?lang=it">
+<script>document.documentElement.classList.add("js")</script>
 <style>
-  :root { color-scheme: dark; --teal: #47d9d9; --mint: #9ff0ee; --violet: #9a7bff; --muted: rgba(255,255,255,.66); }
+  :root { color-scheme: dark; --teal: #47d9d9; --mint: #9ff0ee; --violet: #9a7bff; --muted: rgba(255,255,255,.66);
+    --rounded: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, sans-serif; }
   * { box-sizing: border-box; }
   html, body { margin: 0; }
+  html { scroll-behavior: smooth; }
   body { background: #04060d; color: #fff; font: 17px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
     -webkit-font-smoothing: antialiased; overflow-x: hidden; }
   /* The night sky with the app's violet, teal and blue glows; fixed so it stays put while scrolling on iOS too. */
@@ -26,77 +31,264 @@
       radial-gradient(55% 38% at 92% 30%, rgba(71,217,217,.22), transparent 70%),
       radial-gradient(70% 45% at 40% 100%, rgba(64,128,255,.22), transparent 70%),
       radial-gradient(120% 80% at 50% 0%, #0b1430, #04060d 70%); }
-  main { max-width: 440px; margin: 0 auto; padding: max(40px, env(safe-area-inset-top)) 20px 40px; text-align: center; }
-  .lang { position: absolute; top: max(14px, env(safe-area-inset-top)); right: 16px; font-size: 14px; }
-  .lang a { color: var(--muted); text-decoration: none; padding: 6px 8px; }
+  a { color: inherit; }
+
+  .lang { position: absolute; top: max(14px, env(safe-area-inset-top)); right: 16px; z-index: 3; display: flex; padding: 3px;
+    border-radius: 99px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); }
+  .lang a { padding: 5px 12px; border-radius: 99px; font: 600 13px/1.2 var(--rounded); text-decoration: none; color: var(--muted); }
+  .lang a[aria-current] { background: rgba(255,255,255,.9); color: #04060d; }
+
+  .hero, .feature, .more, .final, footer { max-width: 960px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
+  .hero { padding-top: max(64px, calc(env(safe-area-inset-top) + 48px)); text-align: center; }
   .icon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 12px 40px rgba(71,217,217,.25), 0 0 0 1px rgba(255,255,255,.08); }
-  .eyebrow { margin: 22px 0 6px; font: 600 13px/1 ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: .18em; text-transform: uppercase; color: var(--mint); }
-  h1 { margin: 0; font: 800 38px/1.08 ui-rounded, "SF Pro Rounded", -apple-system, sans-serif; letter-spacing: -.5px; }
-  h1 .grad { display: block; background: linear-gradient(90deg, #fff, #b6f5f3 35%, var(--teal) 65%, var(--violet));
+  .eyebrow { margin: 0 0 8px; font: 600 13px/1.3 ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: .18em; text-transform: uppercase; color: var(--mint); }
+  .hero .eyebrow { margin-top: 22px; }
+  .new { margin-left: 6px; padding: 2px 7px; border-radius: 99px; background: linear-gradient(90deg, var(--teal), var(--violet));
+    color: #04060d; font-size: 11px; letter-spacing: .08em; vertical-align: 1px; }
+  h1, h2 { margin: 0; font-family: var(--rounded); font-weight: 800; letter-spacing: -.5px; }
+  h1 { font-size: 40px; line-height: 1.08; }
+  h2 { font-size: 34px; line-height: 1.1; }
+  h1 span, h2 span { display: block; }
+  .grad { background: linear-gradient(90deg, #fff, #b6f5f3 35%, var(--teal) 65%, var(--violet));
     -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .sub { margin: 14px auto 30px; max-width: 340px; color: var(--muted); }
+  .lead { margin: 14px auto 30px; max-width: 360px; color: var(--muted); }
+
+  .get { text-align: center; }
   .badge { display: inline-block; line-height: 0; border-radius: 12px; }
   .badge img { height: 56px; width: auto; }
-  .or { margin: 22px 0 14px; color: var(--muted); font-size: 14px; }
+  .or { margin: 20px 0 12px; color: var(--muted); font-size: 14px; }
   .beta { display: block; max-width: 320px; margin: 0 auto; padding: 14px 18px; border-radius: 18px; text-decoration: none; color: #fff;
     background: linear-gradient(135deg, rgba(71,217,217,.18), rgba(154,123,255,.22)); border: 1px solid rgba(159,240,238,.35);
     box-shadow: 0 10px 34px rgba(140,102,255,.22); }
-  .beta strong { display: block; font: 700 19px/1.3 ui-rounded, "SF Pro Rounded", -apple-system, sans-serif; }
+  .beta strong { display: block; font: 700 19px/1.3 var(--rounded); }
   .beta span { font-size: 14px; color: var(--muted); }
   .beta:active, .badge:active { transform: scale(.98); }
   .note { margin: 14px auto 0; max-width: 330px; font-size: 13px; color: rgba(255,255,255,.5); }
-  .phone { width: 250px; margin: 44px auto 0; padding: 9px; border-radius: 46px; background: #000;
-    box-shadow: 0 0 0 1.5px rgba(255,255,255,.14), 0 30px 80px rgba(0,0,0,.6), 0 0 90px rgba(71,217,217,.14); }
-  .phone img { display: block; width: 100%; height: auto; border-radius: 37px; }
-  footer { margin-top: 44px; font-size: 13px; color: rgba(255,255,255,.45); }
-  footer a { color: inherit; }
+  .down { display: inline-block; margin-top: 36px; padding: 8px 14px; font-size: 15px; color: var(--mint); text-decoration: none; }
+
+  /* The presentation: one feature per block, the real app capture in a black iPhone with its Dynamic Island. */
+  .feature { padding-top: 72px; text-align: center; }
+  .sub { margin: 12px auto 0; max-width: 360px; color: var(--muted); }
+  .phone { position: relative; width: 260px; margin: 30px auto 0; padding: 9px; border-radius: 46px; background: #000;
+    box-shadow: 0 0 0 1.5px rgba(255,255,255,.14), 0 30px 80px rgba(0,0,0,.6), 0 0 110px rgba(71,217,217,.16); }
+  .feature:nth-of-type(even) .phone { box-shadow: 0 0 0 1.5px rgba(255,255,255,.14), 0 30px 80px rgba(0,0,0,.6), 0 0 110px rgba(140,102,255,.22); }
+  .phone::before { content: ""; position: absolute; z-index: 2; top: 2.9%; left: 50%; width: 29%; height: 4%; transform: translateX(-50%);
+    border-radius: 99px; background: #000; }
+  .phone img { display: block; width: 100%; height: auto; border-radius: 37px; background: #0b0f1c; }
+  /* Rewind plays like the story it is: the year, then the countries. */
+  .story img + img { position: absolute; top: 9px; left: 9px; width: calc(100% - 18px); animation: story 7s ease-in-out infinite; }
+  @keyframes story { 0%, 38% { opacity: 0; } 50%, 88% { opacity: 1; } 100% { opacity: 0; } }
+
+  .more { padding-top: 96px; text-align: center; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin-top: 28px; text-align: left; }
+  .card { padding: 18px; border-radius: 20px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.09); }
+  .card h3 { margin: 0 0 6px; font: 700 17px/1.3 var(--rounded); }
+  .card h3::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 9px; border-radius: 50%; vertical-align: 2px;
+    background: linear-gradient(135deg, var(--teal), var(--violet)); }
+  .card p { margin: 0; font-size: 15px; color: var(--muted); }
+
+  .final { padding-top: 104px; text-align: center; }
+  .final h2 { margin-bottom: 28px; }
+  footer { margin-top: 64px; padding-bottom: max(32px, env(safe-area-inset-bottom)); text-align: center; font-size: 13px; color: rgba(255,255,255,.45); }
+  footer p { margin: 0 auto 10px; max-width: 640px; }
+  .credits { font-size: 11px; color: rgba(255,255,255,.32); }
+
+  .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.in { opacity: 1; transform: none; }
+
+  @media (min-width: 760px) {
+    h1 { font-size: 56px; }
+    h2 { font-size: 44px; }
+    .feature { display: grid; grid-template-columns: 1fr 300px; gap: 72px; align-items: center; padding-top: 120px; text-align: left; }
+    .feature:nth-of-type(even) { grid-template-columns: 300px 1fr; }
+    .feature:nth-of-type(even) .copy { order: 2; }
+    .feature .sub { margin-left: 0; }
+    .phone { width: 300px; margin: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+    .story img + img { animation: none; opacity: 0; }
+  }
 </style>
 </head>
 <body>
-<nav class="lang"><a id="switch" href="?lang=it">Italiano</a></nav>
-<main>
-  <img class="icon" src="icon.png" alt="TravelTo">
+<nav class="lang" aria-label="Language"><a id="lang-en" href="./">EN</a><a id="lang-it" href="?lang=it">IT</a></nav>
+
+<header class="hero">
+  <img class="icon" src="icon.png" width="96" height="96" alt="TravelTo">
   <p class="eyebrow">TravelTo</p>
   <h1><span data-it="Tutti i tuoi viaggi,">All your trips,</span><span class="grad" data-it="su una mappa.">on one map.</span></h1>
-  <p class="sub" data-it="Paesi, città e voli sulla tua mappa del mondo. Gratis per iPhone.">Countries, cities and flights on your own world map. Free for iPhone.</p>
+  <p class="lead" data-it="Paesi, città e voli sulla tua mappa del mondo. Gratis per iPhone.">Countries, cities and flights on your own world map. Free for iPhone.</p>
+  <div class="get">
+    <a class="badge" href="https://apps.apple.com/app/travelto/id6825086985"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store"></a>
+    <p class="or" data-it="oppure">or</p>
+    <a class="beta" href="https://testflight.apple.com/join/gJcFzGsM"><strong data-it="Prova la beta">Try the beta</strong><span data-it="Le novità in anteprima, con TestFlight">New features first, with TestFlight</span></a>
+    <p class="note" data-it="La beta usa l'app TestFlight di Apple (gratis): il link ti guida. Serve iOS 27. Il link non si apre da TikTok? Tocca ··· e scegli «Apri nel browser».">The beta runs in Apple's free TestFlight app: the link shows you how. Requires iOS 27. Link not opening from TikTok? Tap ··· and choose “Open in browser”.</p>
+  </div>
+  <a class="down" href="#features" data-it="Scopri cosa fa ↓">See what it does ↓</a>
+</header>
 
-  <a class="badge" href="https://apps.apple.com/app/travelto/id6825086985">
-    <img id="badge" src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
-  </a>
+<main id="features">
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow" data-it="La tua mappa">Your map</p>
+      <h2><span data-it="Ogni posto">Every place</span><span class="grad" data-it="dove sei stato.">you've been.</span></h2>
+      <p class="sub" data-it="Paesi, città e voli: tutti i tuoi viaggi in un colpo d’occhio.">Countries, cities and flights: all your trips at a glance.</p>
+    </div>
+    <div class="phone"><img class="shot" src="en-map.webp" width="720" height="1565" loading="lazy" alt="The world map with the countries visited and the flight routes" data-it="La mappa del mondo con i paesi visitati e le rotte dei voli"></div>
+  </article>
 
-  <p class="or" data-it="oppure">or</p>
-  <a class="beta" href="https://testflight.apple.com/join/gJcFzGsM">
-    <strong data-it="Prova la beta">Try the beta</strong>
-    <span data-it="Le novità in anteprima, con TestFlight">New features first, with TestFlight</span>
-  </a>
-  <p class="note" data-it="La beta usa l'app TestFlight di Apple (gratis): il link ti guida. Serve iOS 27. Il link non si apre da TikTok? Tocca ··· e scegli «Apri nel browser».">The beta runs in Apple's free TestFlight app: the link shows you how. Requires iOS 27. Link not opening from TikTok? Tap ··· and choose “Open in browser”.</p>
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow" data-it="Importa dalle foto">Import from Photos</p>
+      <h2><span data-it="I tuoi viaggi,">Your trips,</span><span class="grad" data-it="dalle tue foto.">from your photos.</span></h2>
+      <p class="sub" data-it="TravelTo legge dove hai scattato le foto, sul tuo iPhone, e trova paesi, città e quartieri.">TravelTo reads where your photos were taken, on your iPhone, and finds countries, cities and neighborhoods.</p>
+    </div>
+    <div class="phone"><img class="shot" src="en-photo-scan.webp" width="720" height="1565" loading="lazy" alt="The photo scan checking cities with Apple Maps" data-it="La ricerca nelle foto che verifica le città con Apple Maps"></div>
+  </article>
 
-  <div class="phone"><img id="shot" src="mappa-en.jpg" width="598" height="1300" loading="lazy" alt="TravelTo's world map" data-it="La mappa del mondo di TravelTo"></div>
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow" data-it="Città e quartieri">Cities &amp; neighborhoods</p>
+      <h2><span data-it="Anche Asakusa,">Shibuya too,</span><span class="grad" data-it="non solo Tokyo.">not just Tokyo.</span></h2>
+      <p class="sub" data-it="Controlli la lista con le foto e aggiungi alla mappa solo i posti dove sei stato.">Check the list with its photos and add only the places you've been to.</p>
+    </div>
+    <div class="phone"><img class="shot" src="en-photo-places.webp" width="720" height="1565" loading="lazy" alt="The list of places found in the photos, each with a photo" data-it="La lista dei posti trovati nelle foto, ognuno con una foto"></div>
+  </article>
 
-  <footer>
-    <a id="privacy" href="/privacy/en.html">Privacy Policy</a> · <a id="terms" href="/termini/en.html">Terms</a> · <a href="mailto:traveltoapp1@gmail.com">traveltoapp1@gmail.com</a>
-  </footer>
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow" data-it="Il tuo progresso">Your progress</p>
+      <h2><span data-it="Quanto mondo">How far</span><span class="grad" data-it="hai visto?">have you been?</span></h2>
+      <p class="sub" data-it="Tocca un numero sulla mappa e scopri la tua percentuale di mondo.">Tap a number on the map and see how much of the world you've explored.</p>
+    </div>
+    <div class="phone"><img class="shot" src="en-world.webp" width="720" height="1565" loading="lazy" alt="The globe with the share of the world explored" data-it="Il globo con la percentuale di mondo visitata"></div>
+  </article>
+
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow" data-it="Paesi e città">Countries &amp; cities</p>
+      <h2><span data-it="Ogni città,">Every city,</span><span class="grad" data-it="ogni viaggio.">every trip.</span></h2>
+      <p class="sub" data-it="Aggiungi una città e la sua regione si segna da sola. Con le date di ogni viaggio.">Add a city and its region is ticked for you. With the dates of every trip.</p>
+    </div>
+    <div class="phone"><img class="shot" src="en-cities.webp" width="720" height="1565" loading="lazy" alt="A country with its trips and cities" data-it="Un paese con i suoi viaggi e le sue città"></div>
+  </article>
+
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow" data-it="Ricordi">Memories</p>
+      <h2><span data-it="Foto e note">Photos &amp; notes</span><span class="grad" data-it="per ogni paese.">for every country.</span></h2>
+      <p class="sub" data-it="Fino a 10 foto e i tuoi appunti, sempre a portata di mano.">Up to 10 photos and your own notes, always at hand.</p>
+    </div>
+    <div class="phone"><img class="shot" src="en-memories.webp" width="720" height="1565" loading="lazy" alt="Photos and notes of a country" data-it="Le foto e le note di un paese"></div>
+  </article>
+
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow" data-it="Voli">Flights</p>
+      <h2><span data-it="I tuoi voli,">Your flights,</span><span class="grad" data-it="dalla mail.">from the email.</span></h2>
+      <p class="sub" data-it="Incolla la conferma del volo o condividi il PDF: TravelTo trova tratte e date.">Paste the flight confirmation or share its PDF: TravelTo finds routes and dates.</p>
+    </div>
+    <div class="phone"><img class="shot" src="en-flights.webp" width="720" height="1565" loading="lazy" alt="Flights found in a confirmation email" data-it="I voli trovati in una mail di conferma"></div>
+  </article>
+
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow" data-it="Statistiche">Stats</p>
+      <h2><span data-it="I numeri dei">Your trips</span><span class="grad" data-it="tuoi viaggi.">in numbers.</span></h2>
+      <p class="sub" data-it="Continenti, stati USA, giorni fuori casa, chilometri e ore in volo.">Continents, US states, days away, kilometres and hours in the air.</p>
+    </div>
+    <div class="phone"><img class="shot" src="en-stats.webp" width="720" height="1565" loading="lazy" alt="The travel stats" data-it="Le statistiche dei viaggi"></div>
+  </article>
+
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow"><span>Rewind</span><span class="new" data-it="Novità">New</span></p>
+      <h2><span data-it="Rivivi il tuo">Relive your</span><span class="grad" data-it="anno in viaggio.">year in travel.</span></h2>
+      <p class="sub" data-it="Paesi, chilometri in volo e ricordi di ogni anno, in una storia da condividere.">Countries, kilometres flown and memories of every year, in a story to share.</p>
+    </div>
+    <div class="phone story">
+      <img class="shot" src="en-rewind-year.webp" width="720" height="1565" loading="lazy" alt="Rewind: your year in travel" data-it="Rewind: il tuo anno in viaggio">
+      <img class="shot" src="en-rewind-countries.webp" width="720" height="1565" loading="lazy" alt="Rewind: the countries of the year with their flags" data-it="Rewind: i paesi dell'anno con le bandiere">
+    </div>
+  </article>
+
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow" data-it="Amici">Friends</p>
+      <h2><span data-it="Sfida">Challenge</span><span class="grad" data-it="i tuoi amici.">your friends.</span></h2>
+      <p class="sub" data-it="Scambiatevi un codice e scoprite dove siete stati entrambi.">Swap a code and find out where you've both been.</p>
+    </div>
+    <div class="phone"><img class="shot" src="en-friends.webp" width="720" height="1565" loading="lazy" alt="The comparison with a friend" data-it="Il confronto con un amico"></div>
+  </article>
+
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow" data-it="Passaporto">Passport</p>
+      <h2><span data-it="Il tuo passaporto">Your travel</span><span class="grad" data-it="di viaggio.">passport.</span></h2>
+      <p class="sub" data-it="Mappa, bandiere e numeri in una tessera pronta da condividere.">Map, flags and numbers on one card, ready to share.</p>
+    </div>
+    <div class="phone"><img class="shot" src="en-passport.webp" width="720" height="1565" loading="lazy" alt="The travel passport" data-it="Il passaporto di viaggio"></div>
+  </article>
 </main>
+
+<section class="more reveal">
+  <p class="eyebrow" data-it="E poi">Also</p>
+  <h2><span class="grad" data-it="E non è tutto.">And there's more.</span></h2>
+  <div class="cards">
+    <div class="card"><h3 data-it="Widget">Widgets</h3><p data-it="Il conto alla rovescia del prossimo volo, la tua mappa e quanto mondo hai visto, nella Home e nella schermata di blocco.">Your next flight's countdown, your map and your share of the world, on the Home Screen and the Lock Screen.</p></div>
+    <div class="card"><h3 data-it="Backup su iCloud">iCloud backup</h3><p data-it="Ogni profilo viene salvato su iCloud Drive quando chiudi l'app. Su un nuovo iPhone lo apri da Profilo › Importa da un backup.">Every profile is saved to iCloud Drive when you close the app. On a new iPhone, open it from Profile › Import from a backup.</p></div>
+    <div class="card"><h3 data-it="Visitati, vissuti, sognati">Visited, lived, dreamed of</h3><p data-it="I paesi visitati, quelli dove hai vissuto e quelli che sogni, ognuno col suo colore. Più i 50 stati USA.">Countries you've visited, lived in and dream of, each in its own color. Plus all 50 US states.</p></div>
+    <div class="card"><h3 data-it="Satellite o standard">Satellite or standard</h3><p data-it="Mappa standard o satellite, tema chiaro o scuro, con le rotte dei tuoi voli.">Standard or satellite map, light or dark theme, with your flight routes.</p></div>
+    <div class="card"><h3 data-it="Più profili">Several profiles</h3><p data-it="Più profili sullo stesso iPhone, in italiano e in inglese.">Several profiles on the same iPhone, in English and Italian.</p></div>
+    <div class="card"><h3 data-it="Privacy">Private</h3><p data-it="Niente account e niente pubblicità. I tuoi viaggi restano sul tuo iPhone e puoi esportarli quando vuoi.">No account and no ads. Your trips stay on your iPhone, and you can export them whenever you like.</p></div>
+  </div>
+</section>
+
+<section class="final reveal">
+  <p class="eyebrow" data-it="Gratis per iPhone">Free for iPhone</p>
+  <h2><span data-it="Inizia la tua">Start your</span><span class="grad" data-it="mappa.">map.</span></h2>
+  <div class="get">
+    <a class="badge" href="https://apps.apple.com/app/travelto/id6825086985"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store"></a>
+    <p class="or" data-it="oppure">or</p>
+    <a class="beta" href="https://testflight.apple.com/join/gJcFzGsM"><strong data-it="Prova la beta">Try the beta</strong><span data-it="Le novità in anteprima, con TestFlight">New features first, with TestFlight</span></a>
+  </div>
+</section>
+
+<footer>
+  <p><a href="/privacy/en.html" data-it-href="/privacy/">Privacy Policy</a> · <a href="/termini/en.html" data-it-href="/termini/" data-it="Termini">Terms</a> · <a href="mailto:traveltoapp1@gmail.com">traveltoapp1@gmail.com</a></p>
+  <p class="credits" data-it="Foto di esempio negli screenshot: Wikimedia Commons, CC BY — G. Vellut, T. Matsuyama, Ben &amp; Gab, J.-P. Dalbéra, A. Schaffer, J. Douglas, G. Baviere, acediscovery, G. Galeotti, G. Milo, N. Barbieri, G. Piolle, …trialsanderrors.">Sample photos in the screenshots: Wikimedia Commons, CC BY — G. Vellut, T. Matsuyama, Ben &amp; Gab, J.-P. Dalbéra, A. Schaffer, J. Douglas, G. Baviere, acediscovery, G. Galeotti, G. Milo, N. Barbieri, G. Piolle, …trialsanderrors.</p>
+</footer>
+
 <script>
-  // Italian for Italian phones (or ?lang=it), English for everyone else.
-  var q = new URLSearchParams(location.search).get("lang");
-  var it = q ? q === "it" : /^it\b/i.test(navigator.language || "");
+  // English first; Italian only on request (?lang=it, the IT switch).
+  var it = new URLSearchParams(location.search).get("lang") === "it";
   if (it) {
     document.documentElement.lang = "it";
-    document.title = "TravelTo – Scarica";
+    document.title = "TravelTo – Tutti i tuoi viaggi, su una mappa";
     document.querySelectorAll("[data-it]").forEach(function (el) {
       if (el.tagName === "IMG") el.alt = el.dataset.it; else el.textContent = el.dataset.it;
     });
-    document.getElementById("badge").src = "https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/it-it";
-    document.getElementById("badge").alt = "Scarica su App Store";
-    document.getElementById("shot").src = "mappa-it.jpg";
-    document.getElementById("privacy").href = "/privacy/";
-    document.getElementById("terms").href = "/termini/";
-    document.getElementById("terms").textContent = "Termini";
+    document.querySelectorAll("[data-it-href]").forEach(function (a) { a.href = a.dataset.itHref; });
+    document.querySelectorAll(".badge img").forEach(function (img) {
+      img.src = img.src.replace("/en-us", "/it-it");
+      img.alt = "Scarica su App Store";
+    });
+    document.querySelectorAll("img.shot").forEach(function (img) { img.src = img.getAttribute("src").replace(/^en-/, "it-"); });
   }
-  var sw = document.getElementById("switch");
-  sw.href = "?lang=" + (it ? "en" : "it");
-  sw.textContent = it ? "English" : "Italiano";
+  document.getElementById(it ? "lang-it" : "lang-en").setAttribute("aria-current", "true");
+
+  // Each block rises in as it scrolls into view.
+  var blocks = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -12% 0px" });
+    blocks.forEach(function (b) { io.observe(b); });
+  } else {
+    blocks.forEach(function (b) { b.classList.add("in"); });
+  }
 </script>
 </body>
 </html>
